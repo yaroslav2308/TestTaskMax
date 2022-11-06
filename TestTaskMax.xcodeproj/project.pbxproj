@@ -17,6 +17,8 @@
 		12CC4FC42917CEC100492D10 /* AccountAddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FC32917CEC000492D10 /* AccountAddingView.swift */; };
 		12CC4FC62917CEE200492D10 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FC52917CEE200492D10 /* LoginView.swift */; };
 		12CC4FC82917CF0200492D10 /* ConnectionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FC72917CF0200492D10 /* ConnectionSettingsView.swift */; };
+		12CC4FCA2917D2C000492D10 /* PostOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FC92917D2C000492D10 /* PostOption.swift */; };
+		12CC4FCD2917D40200492D10 /* PropotionalFrameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FCC2917D40200492D10 /* PropotionalFrameExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		12CC4FC32917CEC000492D10 /* AccountAddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAddingView.swift; sourceTree = "<group>"; };
 		12CC4FC52917CEE200492D10 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		12CC4FC72917CF0200492D10 /* ConnectionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionSettingsView.swift; sourceTree = "<group>"; };
+		12CC4FC92917D2C000492D10 /* PostOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOption.swift; sourceTree = "<group>"; };
+		12CC4FCC2917D40200492D10 /* PropotionalFrameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropotionalFrameExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		12CC4F952917CD5200492D10 /* TestTaskMax */ = {
 			isa = PBXGroup;
 			children = (
+				12CC4FCB2917D3E400492D10 /* Helpers */,
 				12CC4FC22917CE2E00492D10 /* Model */,
 				12CC4FC12917CE2200492D10 /* Views */,
 				12CC4FC02917CE0D00492D10 /* ViewModel */,
@@ -156,8 +161,17 @@
 		12CC4FC22917CE2E00492D10 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				12CC4FC92917D2C000492D10 /* PostOption.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		12CC4FCB2917D3E400492D10 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				12CC4FCC2917D40200492D10 /* PropotionalFrameExtension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12CC4FCD2917D40200492D10 /* PropotionalFrameExtension.swift in Sources */,
+				12CC4FCA2917D2C000492D10 /* PostOption.swift in Sources */,
 				12CC4F992917CD5200492D10 /* ContentView.swift in Sources */,
 				12CC4FC82917CF0200492D10 /* ConnectionSettingsView.swift in Sources */,
 				12CC4FC42917CEC100492D10 /* AccountAddingView.swift in Sources */,
