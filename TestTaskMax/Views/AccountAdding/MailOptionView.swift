@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct MailOptionView: View {
-    let option: MailOption
+    let mail: MailOption
     var body: some View {
         HStack {
             ZStack {
                 RoundedRectangle(cornerRadius: 12)
                     .fill(.white)
                     .shadow(color: .black.opacity(0.15), radius: 4)
-                Image(option.imageName)
+                Image(mail.imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(5)
             }
             .propotionalFrame(width: 0.2, height: 0.06, isSquared: true, accordingToWidth: false)
-            Text(option.title)
+            Text(mail.title)
+                .font(.system(.body, design: .rounded))
                 .fontWeight(.light)
                 .padding(.leading, 5)
             Spacer()
@@ -38,6 +39,6 @@ struct MailOptionView: View {
 
 struct MailOptionView_Previews: PreviewProvider {
     static var previews: some View {
-        MailOptionView(option: .iCloud)
+        MailOptionView(mail: .iCloud)
     }
 }

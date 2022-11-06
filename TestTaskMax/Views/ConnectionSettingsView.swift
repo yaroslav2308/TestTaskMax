@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct ConnectionSettingsView: View {
+    @Binding var isPresentedConnectionSettings: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            isPresentedConnectionSettings.toggle()
+        } label: {
+            Text("dissmiss")
+        }
+
     }
 }
 
 struct ConnectionSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        ConnectionSettingsView()
+        ConnectionSettingsView(isPresentedConnectionSettings: .constant(true))
     }
 }

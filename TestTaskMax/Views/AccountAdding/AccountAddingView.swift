@@ -9,27 +9,30 @@ import SwiftUI
 
 struct AccountAddingView: View {
     var body: some View {
-        ZStack {
-            Color("backgroundColor")
-                .ignoresSafeArea()
-            VStack {
-                Spacer()
-                Text("Добавить учетную запись почты")
-                    .font(.title2)
-                    .fontWeight(.medium)
-                    .multilineTextAlignment(.center)
-                ForEach(MailOption.allCases, id: \.self) { option in
-                    Button {
-                        
-                    } label: {
-                        MailOptionView(option: option)
-                    }
-                    .buttonStyle(PlainButtonStyle() )
+        NavigationView {
+            ZStack {
+                Color("backgroundColor")
+                    .ignoresSafeArea()
+                VStack {
+                    Text("Добавить учетную \nзапись почты")
+                        .font(.system(.title2, design: .rounded))
+                        .fontWeight(.medium)
+                        .multilineTextAlignment(.center)
+                    ForEach(MailOption.allCases, id: \.self) { mail in
+                        NavigationLink {
+                            LoginView(mail: mail)
+                        } label: {
+                            MailOptionView(mail: mail)
+                        }
+                        .buttonStyle(PlainButtonStyle())
 
+                    }
+                    Spacer()
                 }
-                Spacer()
             }
+            .navigationBarTitleDisplayMode(.inline)
         }
+        
         
     }
 }
