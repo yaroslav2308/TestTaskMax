@@ -14,6 +14,9 @@
 		12CC4FA82917CD5400492D10 /* TestTaskMaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FA72917CD5400492D10 /* TestTaskMaxTests.swift */; };
 		12CC4FB22917CD5400492D10 /* TestTaskMaxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FB12917CD5400492D10 /* TestTaskMaxUITests.swift */; };
 		12CC4FB42917CD5400492D10 /* TestTaskMaxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FB32917CD5400492D10 /* TestTaskMaxUITestsLaunchTests.swift */; };
+		12CC4FC42917CEC100492D10 /* AccountAddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FC32917CEC000492D10 /* AccountAddingView.swift */; };
+		12CC4FC62917CEE200492D10 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FC52917CEE200492D10 /* LoginView.swift */; };
+		12CC4FC82917CF0200492D10 /* ConnectionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FC72917CF0200492D10 /* ConnectionSettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		12CC4FAD2917CD5400492D10 /* TestTaskMaxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTaskMaxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12CC4FB12917CD5400492D10 /* TestTaskMaxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskMaxUITests.swift; sourceTree = "<group>"; };
 		12CC4FB32917CD5400492D10 /* TestTaskMaxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskMaxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		12CC4FC32917CEC000492D10 /* AccountAddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAddingView.swift; sourceTree = "<group>"; };
+		12CC4FC52917CEE200492D10 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		12CC4FC72917CF0200492D10 /* ConnectionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 		12CC4F952917CD5200492D10 /* TestTaskMax */ = {
 			isa = PBXGroup;
 			children = (
+				12CC4FC22917CE2E00492D10 /* Model */,
+				12CC4FC12917CE2200492D10 /* Views */,
+				12CC4FC02917CE0D00492D10 /* ViewModel */,
 				12CC4F962917CD5200492D10 /* TestTaskMaxApp.swift */,
 				12CC4F982917CD5200492D10 /* ContentView.swift */,
 				12CC4F9A2917CD5400492D10 /* Assets.xcassets */,
@@ -125,6 +134,30 @@
 				12CC4FB32917CD5400492D10 /* TestTaskMaxUITestsLaunchTests.swift */,
 			);
 			path = TestTaskMaxUITests;
+			sourceTree = "<group>";
+		};
+		12CC4FC02917CE0D00492D10 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		12CC4FC12917CE2200492D10 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12CC4FC32917CEC000492D10 /* AccountAddingView.swift */,
+				12CC4FC52917CEE200492D10 /* LoginView.swift */,
+				12CC4FC72917CF0200492D10 /* ConnectionSettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		12CC4FC22917CE2E00492D10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				12CC4F992917CD5200492D10 /* ContentView.swift in Sources */,
+				12CC4FC82917CF0200492D10 /* ConnectionSettingsView.swift in Sources */,
+				12CC4FC42917CEC100492D10 /* AccountAddingView.swift in Sources */,
+				12CC4FC62917CEE200492D10 /* LoginView.swift in Sources */,
 				12CC4F972917CD5200492D10 /* TestTaskMaxApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
