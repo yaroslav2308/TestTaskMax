@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PostOption: CaseIterable {
+enum MailOption: CaseIterable {
     case mailRu, yandex, gmail, office, outlook, iCloud, other
     
     var title: String {
