@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingSmtpFirstView: View {
     @ObservedObject var userDataViewModel: UserDataViewModel
     
+    @State private var isPresentedSmtpSecondView = false
     @State private var isIncorrectUserData = false
     
     var body: some View {
@@ -23,20 +24,29 @@ struct SettingSmtpFirstView: View {
                     
                     CustomTextField(title: "Сервер", placeHolder: "mail.npcmax.ru", textBinding: $userDataViewModel.outgoingServer, isSecure: false, isEmail: true)
                         .padding(.horizontal)
-                        .padding(.bottom, UIScreen.main.bounds.height * 0.01)
-                        .padding(.top, UIScreen.main.bounds.height * 0.01 / 2)
+                        .padding(.bottom, 10)
+                        .padding(.top, 5)
                     
                     pickerOutgoingPort
                     
                     pickerSecurityProtocol
                     
-                    CustomTextField(title: "Адрес эл. почты", placeHolder: "Введите почту", textBinding: $userDataViewModel.mail, isSecure: false, isEmail: true)
+                    ToggleView(insecureSSl: $userDataViewModel.insecureIncomingSSL)
                         .padding(.horizontal)
-                        .padding(.bottom, UIScreen.main.bounds.height * 0.01)
                     
-                    CustomTextField(title: "Пароль", placeHolder: "Введите пароль", textBinding: $userDataViewModel.password, isSecure: true, isEmail: false)
-                        .padding(.horizontal)
-                        .padding(.bottom, UIScreen.main.bounds.height * 0.01)
+                    // Navigation to next view
+                    NavigationLink(destination: SettingSmtpSecondView(userDataViewModel: userDataViewModel), isActive: $isPresentedSmtpSecondView) {
+                        EmptyView()
+                    }
+                    
+                    // This message is triggered when user didn't paste his data
+                    if isIncorrectUserData {
+                        MessageOfIncorrectnessView()
+                    }
+                    
+                    // button to move to next view or to trigger MessageOfIncorrectnessView
+                    nextButton
+                        .padding(9)
                 }
             }
         }
@@ -76,6 +86,25 @@ extension SettingSmtpFirstView {
         }
         .padding(.horizontal)
         .padding(.bottom, 10)
+    }
+    
+    var nextButton: some View {
+        Button {
+            if userDataViewModel.outgoingServer == "" {
+                withAnimation(.spring()) {
+                    isIncorrectUserData = true
+                }
+            } else {
+                withAnimation(.spring()) {
+                    isIncorrectUserData = false
+                }
+                
+                isPresentedSmtpSecondView.toggle()
+            }
+        } label: {
+            CustomButtonView(title: "Далее")
+        }
+        .padding(.top, 5)
     }
 }
 
