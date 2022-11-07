@@ -14,12 +14,27 @@ struct SettingsHeaderView: View {
             .font(.system(.title2, design: .rounded))
             .fontWeight(.medium)
             .multilineTextAlignment(.center)
-        
-        Text("Выполните настроку \(headerType.title) \n\(headerType.subTitle)")
-            .font(.system(.body, design: .rounded))
-            .multilineTextAlignment(.center)
-            .padding(.top, 1)
-            .foregroundColor(.gray)
+        VStack(spacing: 0) {
+            HStack(spacing: 0) {
+                Text("Выполните настроку  ")
+                    .font(.system(.body, design: .rounded))
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 1)
+                    .foregroundColor(.gray)
+                Text(headerType.title)
+                    .fontWeight(.medium)
+                    .font(.system(.body, design: .rounded))
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 1)
+                    .foregroundColor(.black)
+            }
+            Text(headerType.subTitle)
+                .font(.system(.body, design: .rounded))
+                .multilineTextAlignment(.center)
+                .padding(.top, 1)
+                .foregroundColor(.gray)
+            
+        }
     }
 }
 
@@ -42,5 +57,11 @@ enum HeaderType {
         case .smtp:
             return "(исходящая почта)"
         }
+    }
+}
+
+struct SettingsHeaderView_Previews: PreviewProvider {
+    static var previews: some View {
+        SettingsHeaderView(headerType: .imap)
     }
 }
