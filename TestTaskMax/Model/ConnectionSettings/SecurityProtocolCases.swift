@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SecurityProtocolCases: CaseIterable {
+enum SecurityProtocolCases: CaseIterable, Codable {
     case sslTls, startTls, withoutSecurity
     
     var title: String {

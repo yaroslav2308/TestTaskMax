@@ -22,7 +22,7 @@ struct SettingImapFirstView: View {
                     
                     SettingsHeaderView(headerType: .imap)
                     
-                    CustomTextField(title: "Сервер", placeHolder: "mail.npcmax.ru", textBinding: $userDataViewModel.incomingServer, isSecure: false, isEmail: true)
+                    CustomTextField(title: "Сервер", placeHolder: "mail.npcmax.ru", textBinding: $userDataViewModel.userData.incomingServer, isSecure: false, isEmail: true)
                         .padding(.horizontal)
                         .padding(.vertical, 10)
                     
@@ -31,10 +31,10 @@ struct SettingImapFirstView: View {
                     
                     pickerSecurityProtocol
                     
-                    ToggleView(insecureSSl: $userDataViewModel.insecureOutgoingSSL)
+                    ToggleView(insecureSSl: $userDataViewModel.userData.insecureOutgoingSSL)
                         .padding(.horizontal)
                     
-                    CustomTextField(title: "Папка пользователя", placeHolder: "", textBinding: $userDataViewModel.userFolder, isSecure: false, isEmail: false)
+                    CustomTextField(title: "Папка пользователя", placeHolder: "", textBinding: $userDataViewModel.userData.userFolder, isSecure: false, isEmail: false)
                         .padding(.horizontal)
                         .padding(.bottom, 10)
                     
@@ -63,7 +63,7 @@ extension SettingImapFirstView {
             Text("Порт:")
                 .font(.system(.title3, design: .rounded))
                 .foregroundColor(.gray)
-            Picker("Порт", selection: $userDataViewModel.incomingPort) {
+            Picker("Порт", selection: $userDataViewModel.userData.incomingPort) {
                 ForEach(IncomingPort.allCases, id: \.self) { port in
                     Text(port.title).tag(port)
                 }
@@ -80,7 +80,7 @@ extension SettingImapFirstView {
             Text("Безопасность:")
                 .font(.system(.title3, design: .rounded))
                 .foregroundColor(.gray)
-            Picker("Безопасность", selection: $userDataViewModel.incomingSecurity) {
+            Picker("Безопасность", selection: $userDataViewModel.userData.incomingSecurity) {
                 ForEach(SecurityProtocolCases.allCases, id: \.self) { security in
                     Text(security.title).tag(security)
                 }
@@ -94,7 +94,7 @@ extension SettingImapFirstView {
     
     var nextButton: some View {
         Button {
-            if userDataViewModel.incomingServer == "" || userDataViewModel.userFolder == "" {
+            if userDataViewModel.userData.incomingServer == "" || userDataViewModel.userData.userFolder == "" {
                 withAnimation(.spring()) {
                     isIncorrectUserData = true
                 }

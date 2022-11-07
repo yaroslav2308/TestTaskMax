@@ -11,15 +11,15 @@ struct UserDataView: View {
     @ObservedObject var userDataViewModel: UserDataViewModel
     var body: some View {
         
-        CustomTextField(title: "Имя", placeHolder: "Введите имя", textBinding: $userDataViewModel.name, isSecure: false, isEmail: false)
+        CustomTextField(title: "Имя", placeHolder: "Введите имя", textBinding: $userDataViewModel.userData.name, isSecure: false, isEmail: false)
         .padding(.horizontal)
         .padding(.vertical, 10)
         
-        CustomTextField(title: "Адрес эл. почты", placeHolder: "Введите почту", textBinding: $userDataViewModel.mail, isSecure: false, isEmail: true)
+        CustomTextField(title: "Адрес эл. почты", placeHolder: "Введите почту", textBinding: $userDataViewModel.userData.mail, isSecure: false, isEmail: true)
         .padding(.horizontal)
         .padding(.bottom, 10)
         
-        CustomTextField(title: "Пароль", placeHolder: "Введите пароль", textBinding: $userDataViewModel.password, isSecure: true, isEmail: false)
+        CustomTextField(title: "Пароль", placeHolder: "Введите пароль", textBinding: $userDataViewModel.userData.password, isSecure: true, isEmail: false)
         .padding(.horizontal)
         .padding(.bottom)
     }

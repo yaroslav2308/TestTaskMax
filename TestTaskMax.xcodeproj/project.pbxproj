@@ -20,6 +20,7 @@
 		12369D6229193F0F00AFF0C5 /* ExtensionToHideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D6129193F0F00AFF0C5 /* ExtensionToHideKeyboard.swift */; };
 		12369D6429193FFA00AFF0C5 /* BackgroundColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D6329193FFA00AFF0C5 /* BackgroundColorExtension.swift */; };
 		12369D66291944CA00AFF0C5 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D65291944CA00AFF0C5 /* ToggleView.swift */; };
+		12369D68291967D800AFF0C5 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D67291967D800AFF0C5 /* UserData.swift */; };
 		12CC4F972917CD5200492D10 /* TestTaskMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4F962917CD5200492D10 /* TestTaskMaxApp.swift */; };
 		12CC4F992917CD5200492D10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4F982917CD5200492D10 /* ContentView.swift */; };
 		12CC4F9B2917CD5400492D10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12CC4F9A2917CD5400492D10 /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		12369D6129193F0F00AFF0C5 /* ExtensionToHideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionToHideKeyboard.swift; sourceTree = "<group>"; };
 		12369D6329193FFA00AFF0C5 /* BackgroundColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorExtension.swift; sourceTree = "<group>"; };
 		12369D65291944CA00AFF0C5 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		12369D67291967D800AFF0C5 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		12CC4F932917CD5200492D10 /* TestTaskMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12CC4F962917CD5200492D10 /* TestTaskMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskMaxApp.swift; sourceTree = "<group>"; };
 		12CC4F982917CD5200492D10 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			children = (
 				12369D4C2918F88E00AFF0C5 /* ConnectionSettings */,
 				12CC4FC92917D2C000492D10 /* MailOption.swift */,
+				12369D67291967D800AFF0C5 /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				12369D432918F37800AFF0C5 /* IncomingPort.swift in Sources */,
 				12369D472918F78100AFF0C5 /* SecurityProtocolCases.swift in Sources */,
 				12CC4FD12917E85100492D10 /* MailOptionView.swift in Sources */,
+				12369D68291967D800AFF0C5 /* UserData.swift in Sources */,
 				12369D5929192CD700AFF0C5 /* SettingsHeaderView.swift in Sources */,
 				12CC4F972917CD5200492D10 /* TestTaskMaxApp.swift in Sources */,
 				12369D5B2919356200AFF0C5 /* MessageOfIncorrectnessView.swift in Sources */,

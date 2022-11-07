@@ -60,13 +60,14 @@ struct LoginView: View {
                 }
             }
         }
+        .onAppear(perform: userDataViewModel.getUserData)
     }
 }
 
 extension LoginView {
     var continueButton: some View {
         Button {
-            if userDataViewModel.name == "" || userDataViewModel.mail == "" || userDataViewModel.password == "" {
+            if userDataViewModel.userData.name == "" || userDataViewModel.userData.mail == "" || userDataViewModel.userData.password == "" {
                 withAnimation(.spring()) {
                     isIncorrectUserData = true
                 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum OutgoingPort: CaseIterable {
+enum OutgoingPort: CaseIterable, Codable {
     case port25, port465, port587, portUser
     
     var title: String {

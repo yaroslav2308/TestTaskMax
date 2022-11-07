@@ -22,7 +22,7 @@ struct SettingSmtpFirstView: View {
                     
                     SettingsHeaderView(headerType: .smtp)
                     
-                    CustomTextField(title: "Сервер", placeHolder: "mail.npcmax.ru", textBinding: $userDataViewModel.outgoingServer, isSecure: false, isEmail: true)
+                    CustomTextField(title: "Сервер", placeHolder: "mail.npcmax.ru", textBinding: $userDataViewModel.userData.outgoingServer, isSecure: false, isEmail: true)
                         .padding(.horizontal)
                         .padding(.bottom, 10)
                         .padding(.top, 5)
@@ -31,7 +31,7 @@ struct SettingSmtpFirstView: View {
                     
                     pickerSecurityProtocol
                     
-                    ToggleView(insecureSSl: $userDataViewModel.insecureIncomingSSL)
+                    ToggleView(insecureSSl: $userDataViewModel.userData.insecureIncomingSSL)
                         .padding(.horizontal)
                     
                     // Navigation to next view
@@ -59,7 +59,7 @@ extension SettingSmtpFirstView {
             Text("Порт:")
                 .font(.system(.title3, design: .rounded))
                 .foregroundColor(.gray)
-            Picker("Порт", selection: $userDataViewModel.outgoingPort) {
+            Picker("Порт", selection: $userDataViewModel.userData.outgoingPort) {
                 ForEach(OutgoingPort.allCases, id: \.self) { port in
                     Text(port.title).tag(port)
                 }
@@ -76,7 +76,7 @@ extension SettingSmtpFirstView {
             Text("Безопасность:")
                 .font(.system(.title3, design: .rounded))
                 .foregroundColor(.gray)
-            Picker("Безопасность", selection: $userDataViewModel.outgoingSecurity) {
+            Picker("Безопасность", selection: $userDataViewModel.userData.outgoingSecurity) {
                 ForEach(SecurityProtocolCases.allCases, id: \.self) { security in
                     Text(security.title).tag(security)
                 }
@@ -90,7 +90,7 @@ extension SettingSmtpFirstView {
     
     var nextButton: some View {
         Button {
-            if userDataViewModel.outgoingServer == "" {
+            if userDataViewModel.userData.outgoingServer == "" {
                 withAnimation(.spring()) {
                     isIncorrectUserData = true
                 }

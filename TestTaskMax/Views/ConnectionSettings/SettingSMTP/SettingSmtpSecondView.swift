@@ -20,11 +20,11 @@ struct SettingSmtpSecondView: View {
                 VStack {
                     SettingsHeaderView(headerType: .smtp)
                     
-                    CustomTextField(title: "Адрес эл. почты", placeHolder: "Введите почту", textBinding: $userDataViewModel.mail, isSecure: false, isEmail: true)
+                    CustomTextField(title: "Адрес эл. почты", placeHolder: "Введите почту", textBinding: $userDataViewModel.userData.mail, isSecure: false, isEmail: true)
                         .padding(.horizontal)
                         .padding(.vertical, 10)
                     
-                    CustomTextField(title: "Пароль", placeHolder: "Введите пароль", textBinding: $userDataViewModel.password, isSecure: true, isEmail: false)
+                    CustomTextField(title: "Пароль", placeHolder: "Введите пароль", textBinding: $userDataViewModel.userData.password, isSecure: true, isEmail: false)
                         .padding(.horizontal)
                         .padding(.bottom, 10)
                     
@@ -45,7 +45,7 @@ struct SettingSmtpSecondView: View {
 extension SettingSmtpSecondView {
     var addAccountButton: some View {
         Button {
-            if userDataViewModel.mail == "" || userDataViewModel.password == "" {
+            if userDataViewModel.userData.mail == "" || userDataViewModel.userData.password == "" {
                 withAnimation(.spring()) {
                     isIncorrectUserData = true
                 }
