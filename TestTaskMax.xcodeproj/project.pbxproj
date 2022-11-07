@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12369D432918F37800AFF0C5 /* IncomingPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D422918F37800AFF0C5 /* IncomingPort.swift */; };
+		12369D472918F78100AFF0C5 /* SecurityProtocolCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D462918F78100AFF0C5 /* SecurityProtocolCases.swift */; };
+		12369D492918F7EC00AFF0C5 /* OutgoingPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D482918F7EC00AFF0C5 /* OutgoingPort.swift */; };
+		12369D4F2918FCD900AFF0C5 /* SettingSmtpFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D4E2918FCD900AFF0C5 /* SettingSmtpFirstView.swift */; };
+		12369D512918FD0800AFF0C5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D502918FD0800AFF0C5 /* CustomTextField.swift */; };
+		12369D5729192B5100AFF0C5 /* SettingImapSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D5629192B5100AFF0C5 /* SettingImapSecondView.swift */; };
+		12369D5929192CD700AFF0C5 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D5829192CD600AFF0C5 /* SettingsHeaderView.swift */; };
+		12369D5B2919356200AFF0C5 /* MessageOfIncorrectnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D5A2919356200AFF0C5 /* MessageOfIncorrectnessView.swift */; };
+		12369D5E291935B400AFF0C5 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D5D291935B400AFF0C5 /* CustomButtonView.swift */; };
+		12369D60291937B500AFF0C5 /* SettingSmtpSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D5F291937B500AFF0C5 /* SettingSmtpSecondView.swift */; };
+		12369D6229193F0F00AFF0C5 /* ExtensionToHideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D6129193F0F00AFF0C5 /* ExtensionToHideKeyboard.swift */; };
+		12369D6429193FFA00AFF0C5 /* BackgroundColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D6329193FFA00AFF0C5 /* BackgroundColorExtension.swift */; };
+		12369D66291944CA00AFF0C5 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12369D65291944CA00AFF0C5 /* ToggleView.swift */; };
 		12CC4F972917CD5200492D10 /* TestTaskMaxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4F962917CD5200492D10 /* TestTaskMaxApp.swift */; };
 		12CC4F992917CD5200492D10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4F982917CD5200492D10 /* ContentView.swift */; };
 		12CC4F9B2917CD5400492D10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12CC4F9A2917CD5400492D10 /* Assets.xcassets */; };
@@ -16,11 +29,12 @@
 		12CC4FB42917CD5400492D10 /* TestTaskMaxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FB32917CD5400492D10 /* TestTaskMaxUITestsLaunchTests.swift */; };
 		12CC4FC42917CEC100492D10 /* AccountAddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FC32917CEC000492D10 /* AccountAddingView.swift */; };
 		12CC4FC62917CEE200492D10 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FC52917CEE200492D10 /* LoginView.swift */; };
-		12CC4FC82917CF0200492D10 /* ConnectionSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FC72917CF0200492D10 /* ConnectionSettingsView.swift */; };
+		12CC4FC82917CF0200492D10 /* SettingImapFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FC72917CF0200492D10 /* SettingImapFirstView.swift */; };
 		12CC4FCA2917D2C000492D10 /* MailOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FC92917D2C000492D10 /* MailOption.swift */; };
 		12CC4FCD2917D40200492D10 /* PropotionalFrameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FCC2917D40200492D10 /* PropotionalFrameExtension.swift */; };
 		12CC4FD12917E85100492D10 /* MailOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FD02917E85100492D10 /* MailOptionView.swift */; };
 		12CC4FD52918107600492D10 /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FD42918107600492D10 /* UserDataViewModel.swift */; };
+		12CC4FD829183E3B00492D10 /* UserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC4FD729183E3B00492D10 /* UserDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +55,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12369D422918F37800AFF0C5 /* IncomingPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingPort.swift; sourceTree = "<group>"; };
+		12369D462918F78100AFF0C5 /* SecurityProtocolCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityProtocolCases.swift; sourceTree = "<group>"; };
+		12369D482918F7EC00AFF0C5 /* OutgoingPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingPort.swift; sourceTree = "<group>"; };
+		12369D4E2918FCD900AFF0C5 /* SettingSmtpFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSmtpFirstView.swift; sourceTree = "<group>"; };
+		12369D502918FD0800AFF0C5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		12369D5629192B5100AFF0C5 /* SettingImapSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingImapSecondView.swift; sourceTree = "<group>"; };
+		12369D5829192CD600AFF0C5 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
+		12369D5A2919356200AFF0C5 /* MessageOfIncorrectnessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageOfIncorrectnessView.swift; sourceTree = "<group>"; };
+		12369D5D291935B400AFF0C5 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		12369D5F291937B500AFF0C5 /* SettingSmtpSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSmtpSecondView.swift; sourceTree = "<group>"; };
+		12369D6129193F0F00AFF0C5 /* ExtensionToHideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionToHideKeyboard.swift; sourceTree = "<group>"; };
+		12369D6329193FFA00AFF0C5 /* BackgroundColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorExtension.swift; sourceTree = "<group>"; };
+		12369D65291944CA00AFF0C5 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		12CC4F932917CD5200492D10 /* TestTaskMax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskMax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12CC4F962917CD5200492D10 /* TestTaskMaxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskMaxApp.swift; sourceTree = "<group>"; };
 		12CC4F982917CD5200492D10 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,11 +80,12 @@
 		12CC4FB32917CD5400492D10 /* TestTaskMaxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskMaxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		12CC4FC32917CEC000492D10 /* AccountAddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAddingView.swift; sourceTree = "<group>"; };
 		12CC4FC52917CEE200492D10 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		12CC4FC72917CF0200492D10 /* ConnectionSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionSettingsView.swift; sourceTree = "<group>"; };
+		12CC4FC72917CF0200492D10 /* SettingImapFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingImapFirstView.swift; sourceTree = "<group>"; };
 		12CC4FC92917D2C000492D10 /* MailOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailOption.swift; sourceTree = "<group>"; };
 		12CC4FCC2917D40200492D10 /* PropotionalFrameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropotionalFrameExtension.swift; sourceTree = "<group>"; };
 		12CC4FD02917E85100492D10 /* MailOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailOptionView.swift; sourceTree = "<group>"; };
 		12CC4FD42918107600492D10 /* UserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
+		12CC4FD729183E3B00492D10 /* UserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +113,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12369D4C2918F88E00AFF0C5 /* ConnectionSettings */ = {
+			isa = PBXGroup;
+			children = (
+				12369D462918F78100AFF0C5 /* SecurityProtocolCases.swift */,
+				12369D422918F37800AFF0C5 /* IncomingPort.swift */,
+				12369D482918F7EC00AFF0C5 /* OutgoingPort.swift */,
+			);
+			path = ConnectionSettings;
+			sourceTree = "<group>";
+		};
+		12369D4D2918FCAB00AFF0C5 /* ConnectionSettings */ = {
+			isa = PBXGroup;
+			children = (
+				12369D65291944CA00AFF0C5 /* ToggleView.swift */,
+				12369D5A2919356200AFF0C5 /* MessageOfIncorrectnessView.swift */,
+				12369D5829192CD600AFF0C5 /* SettingsHeaderView.swift */,
+				12369D5429192AE400AFF0C5 /* SettingIMAP */,
+				12369D5529192B0200AFF0C5 /* SettingSMTP */,
+			);
+			path = ConnectionSettings;
+			sourceTree = "<group>";
+		};
+		12369D5429192AE400AFF0C5 /* SettingIMAP */ = {
+			isa = PBXGroup;
+			children = (
+				12CC4FC72917CF0200492D10 /* SettingImapFirstView.swift */,
+				12369D5629192B5100AFF0C5 /* SettingImapSecondView.swift */,
+			);
+			path = SettingIMAP;
+			sourceTree = "<group>";
+		};
+		12369D5529192B0200AFF0C5 /* SettingSMTP */ = {
+			isa = PBXGroup;
+			children = (
+				12369D4E2918FCD900AFF0C5 /* SettingSmtpFirstView.swift */,
+				12369D5F291937B500AFF0C5 /* SettingSmtpSecondView.swift */,
+			);
+			path = SettingSMTP;
+			sourceTree = "<group>";
+		};
 		12CC4F8A2917CD5200492D10 = {
 			isa = PBXGroup;
 			children = (
@@ -108,12 +176,12 @@
 		12CC4F952917CD5200492D10 /* TestTaskMax */ = {
 			isa = PBXGroup;
 			children = (
+				12CC4F962917CD5200492D10 /* TestTaskMaxApp.swift */,
+				12CC4F982917CD5200492D10 /* ContentView.swift */,
 				12CC4FCB2917D3E400492D10 /* Helpers */,
 				12CC4FC22917CE2E00492D10 /* Model */,
 				12CC4FC12917CE2200492D10 /* Views */,
 				12CC4FC02917CE0D00492D10 /* ViewModel */,
-				12CC4F962917CD5200492D10 /* TestTaskMaxApp.swift */,
-				12CC4F982917CD5200492D10 /* ContentView.swift */,
 				12CC4F9A2917CD5400492D10 /* Assets.xcassets */,
 				12CC4F9C2917CD5400492D10 /* Preview Content */,
 			);
@@ -156,9 +224,11 @@
 		12CC4FC12917CE2200492D10 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12369D5D291935B400AFF0C5 /* CustomButtonView.swift */,
+				12369D502918FD0800AFF0C5 /* CustomTextField.swift */,
 				12CC4FCE2917E82200492D10 /* AccountAdding */,
-				12CC4FC52917CEE200492D10 /* LoginView.swift */,
-				12CC4FC72917CF0200492D10 /* ConnectionSettingsView.swift */,
+				12CC4FD629183E1C00492D10 /* Login */,
+				12369D4D2918FCAB00AFF0C5 /* ConnectionSettings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +236,7 @@
 		12CC4FC22917CE2E00492D10 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				12369D4C2918F88E00AFF0C5 /* ConnectionSettings */,
 				12CC4FC92917D2C000492D10 /* MailOption.swift */,
 			);
 			path = Model;
@@ -175,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				12CC4FCC2917D40200492D10 /* PropotionalFrameExtension.swift */,
+				12369D6129193F0F00AFF0C5 /* ExtensionToHideKeyboard.swift */,
+				12369D6329193FFA00AFF0C5 /* BackgroundColorExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -186,6 +259,15 @@
 				12CC4FD02917E85100492D10 /* MailOptionView.swift */,
 			);
 			path = AccountAdding;
+			sourceTree = "<group>";
+		};
+		12CC4FD629183E1C00492D10 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				12CC4FC52917CEE200492D10 /* LoginView.swift */,
+				12CC4FD729183E3B00492D10 /* UserDataView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,15 +400,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12369D66291944CA00AFF0C5 /* ToggleView.swift in Sources */,
 				12CC4FCD2917D40200492D10 /* PropotionalFrameExtension.swift in Sources */,
+				12CC4FD829183E3B00492D10 /* UserDataView.swift in Sources */,
+				12369D5729192B5100AFF0C5 /* SettingImapSecondView.swift in Sources */,
+				12369D60291937B500AFF0C5 /* SettingSmtpSecondView.swift in Sources */,
 				12CC4FCA2917D2C000492D10 /* MailOption.swift in Sources */,
 				12CC4F992917CD5200492D10 /* ContentView.swift in Sources */,
-				12CC4FC82917CF0200492D10 /* ConnectionSettingsView.swift in Sources */,
+				12CC4FC82917CF0200492D10 /* SettingImapFirstView.swift in Sources */,
+				12369D6229193F0F00AFF0C5 /* ExtensionToHideKeyboard.swift in Sources */,
+				12369D5E291935B400AFF0C5 /* CustomButtonView.swift in Sources */,
+				12369D6429193FFA00AFF0C5 /* BackgroundColorExtension.swift in Sources */,
 				12CC4FC42917CEC100492D10 /* AccountAddingView.swift in Sources */,
+				12369D492918F7EC00AFF0C5 /* OutgoingPort.swift in Sources */,
 				12CC4FC62917CEE200492D10 /* LoginView.swift in Sources */,
+				12369D4F2918FCD900AFF0C5 /* SettingSmtpFirstView.swift in Sources */,
+				12369D432918F37800AFF0C5 /* IncomingPort.swift in Sources */,
+				12369D472918F78100AFF0C5 /* SecurityProtocolCases.swift in Sources */,
 				12CC4FD12917E85100492D10 /* MailOptionView.swift in Sources */,
+				12369D5929192CD700AFF0C5 /* SettingsHeaderView.swift in Sources */,
 				12CC4F972917CD5200492D10 /* TestTaskMaxApp.swift in Sources */,
+				12369D5B2919356200AFF0C5 /* MessageOfIncorrectnessView.swift in Sources */,
 				12CC4FD52918107600492D10 /* UserDataViewModel.swift in Sources */,
+				12369D512918FD0800AFF0C5 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

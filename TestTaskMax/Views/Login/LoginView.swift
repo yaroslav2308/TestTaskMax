@@ -14,6 +14,8 @@ struct LoginView: View {
     @State private var isPresentedConnectionSettings = false
     @State private var isIncorrectUserData = false
     
+    @State private var moveLeftRight = 7
+    
     init(mail: MailOption){
         UITableView.appearance().backgroundColor = .clear
         self.mail = mail
@@ -21,10 +23,11 @@ struct LoginView: View {
     
     var body: some View {
         ZStack {
-            Color("backgroundColor")
+            Color.backgroundColor
                 .ignoresSafeArea()
             ScrollView {
                 VStack {
+                    // Header
                     Text("Добавить учетную \nзапись почты IMAP")
                         .font(.system(.title2, design: .rounded))
                         .fontWeight(.medium)
@@ -36,85 +39,50 @@ struct LoginView: View {
                         .padding(.top, 5)
                         .foregroundColor(.gray)
                     
-                    
-                    VStack(alignment: .leading) {
-                        Text("Имя:")
-                            .font(.system(.title3, design: .rounded))
-                            .foregroundColor(.gray)
-                        TextField("Введите свое имя", text: $userDataViewModel.name)
-                            .font(.system(.title3, design: .rounded))
-                            .textFieldStyle(.roundedBorder)
-                            .padding(.top, -10)
-                    }
-                    .padding(.horizontal)
-                    .padding(.vertical, 10)
-                    
-                    VStack(alignment: .leading) {
-                        Text("Адрес эл. почты:")
-                            .font(.system(.title3, design: .rounded))
-                            .foregroundColor(.gray)
-                        TextField("Введите почту", text: $userDataViewModel.mail)
-                            .font(.system(.title3, design: .rounded))
-                            .textFieldStyle(.roundedBorder)
-                            .padding(.top, -10)
-                    }
-                    .padding(.horizontal)
-                    .padding(.bottom, 10)
-                    
-                    VStack(alignment: .leading) {
-                        Text("Пароль:")
-                            .font(.system(.title3, design: .rounded))
-                            .foregroundColor(.gray)
-                        SecureField("Введите пароль", text: $userDataViewModel.password)
-                            .font(.system(.title3, design: .rounded))
-                            .textFieldStyle(.roundedBorder)
-                            .padding(.top, -10)
-                    }
-                    .padding(.horizontal)
-                    .padding(.bottom)
-                    
+                    // User data text fields
+                    UserDataView(userDataViewModel: userDataViewModel)
                     
                     // Navigation to connection settings view
-                    NavigationLink(destination: ConnectionSettingsView(userDataViewModel: userDataViewModel), isActive: $isPresentedConnectionSettings) {
+                    NavigationLink(destination: SettingImapFirstView(userDataViewModel: userDataViewModel), isActive: $isPresentedConnectionSettings) {
                         EmptyView()
                     }
                     
-                    // This message is showed 
+                    // This message is showed when user didn't paste his data
                     if isIncorrectUserData {
                         Text("Заполните все необходимые поля")
                             .font(.system(.body, design: .rounded))
                             .multilineTextAlignment(.center)
-                            .padding(.top, 5)
                             .foregroundColor(.gray)
                     }
                     
-                    Button {
-                        if userDataViewModel.name == "" || userDataViewModel.mail == "" || userDataViewModel.password == "" {
-                            withAnimation {
-                                isIncorrectUserData = true
-                            }
-                        } else {
-                            if mail == .other {
-                                isPresentedConnectionSettings.toggle()
-                            }
-                        }
-                        
-                    } label: {
-                        ZStack {
-                            Text("Продолжить")
-                                .font(.system(.headline, design: .rounded))
-                                .fontWeight(.semibold)
-                                .foregroundColor(.white)
-                                .padding(10)
-                                .background(RoundedRectangle(cornerRadius: 12)
-                                                .fill())
-                        }
-                    }
-                    
-                    Spacer()
+                    continueButton
+                        .padding()
+                }
+            }
+        }
+    }
+}
+
+extension LoginView {
+    var continueButton: some View {
+        Button {
+            if userDataViewModel.name == "" || userDataViewModel.mail == "" || userDataViewModel.password == "" {
+                withAnimation(.spring()) {
+                    isIncorrectUserData = true
+                }
+            } else {
+                withAnimation(.spring()) {
+                    isIncorrectUserData = false
+                }
+                if mail == .other {
+                    isPresentedConnectionSettings.toggle()
                 }
             }
             
+        } label: {
+            ZStack {
+                CustomButtonView(title: "Продолжить")
+            }
         }
     }
 }

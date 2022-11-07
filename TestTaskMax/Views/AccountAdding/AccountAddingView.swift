@@ -11,7 +11,7 @@ struct AccountAddingView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color("backgroundColor")
+                Color.backgroundColor
                     .ignoresSafeArea()
                 VStack {
                     Text("Добавить учетную \nзапись почты")
