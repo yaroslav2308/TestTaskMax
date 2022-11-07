@@ -9,9 +9,10 @@ import SwiftUI
 
 struct LoginView: View {
     let mail: MailOption
-    @StateObject private var userData = UserDataViewModel()
+    @StateObject private var userDataViewModel = UserDataViewModel()
     
     @State private var isPresentedConnectionSettings = false
+    @State private var isIncorrectUserData = false
     
     init(mail: MailOption){
         UITableView.appearance().backgroundColor = .clear
@@ -40,29 +41,31 @@ struct LoginView: View {
                         Text("Имя:")
                             .font(.system(.title3, design: .rounded))
                             .foregroundColor(.gray)
-                        TextField("Введите свое имя", text: $userData.name)
+                        TextField("Введите свое имя", text: $userDataViewModel.name)
                             .font(.system(.title3, design: .rounded))
                             .textFieldStyle(.roundedBorder)
                             .padding(.top, -10)
                     }
                     .padding(.horizontal)
                     .padding(.vertical, 10)
+                    
                     VStack(alignment: .leading) {
                         Text("Адрес эл. почты:")
                             .font(.system(.title3, design: .rounded))
                             .foregroundColor(.gray)
-                        TextField("Введите почту", text: $userData.mail)
+                        TextField("Введите почту", text: $userDataViewModel.mail)
                             .font(.system(.title3, design: .rounded))
                             .textFieldStyle(.roundedBorder)
                             .padding(.top, -10)
                     }
                     .padding(.horizontal)
                     .padding(.bottom, 10)
+                    
                     VStack(alignment: .leading) {
                         Text("Пароль:")
                             .font(.system(.title3, design: .rounded))
                             .foregroundColor(.gray)
-                        TextField("Введите пароль", text: $userData.password)
+                        SecureField("Введите пароль", text: $userDataViewModel.password)
                             .font(.system(.title3, design: .rounded))
                             .textFieldStyle(.roundedBorder)
                             .padding(.top, -10)
@@ -70,14 +73,34 @@ struct LoginView: View {
                     .padding(.horizontal)
                     .padding(.bottom)
                     
+                    
+                    // Navigation to connection settings view
+                    NavigationLink(destination: ConnectionSettingsView(userDataViewModel: userDataViewModel), isActive: $isPresentedConnectionSettings) {
+                        EmptyView()
+                    }
+                    
+                    // This message is showed 
+                    if isIncorrectUserData {
+                        Text("Заполните все необходимые поля")
+                            .font(.system(.body, design: .rounded))
+                            .multilineTextAlignment(.center)
+                            .padding(.top, 5)
+                            .foregroundColor(.gray)
+                    }
+                    
                     Button {
-                        if mail == .other {
-                            isPresentedConnectionSettings.toggle()
+                        if userDataViewModel.name == "" || userDataViewModel.mail == "" || userDataViewModel.password == "" {
+                            withAnimation {
+                                isIncorrectUserData = true
+                            }
+                        } else {
+                            if mail == .other {
+                                isPresentedConnectionSettings.toggle()
+                            }
                         }
+                        
                     } label: {
                         ZStack {
-                            
-                            
                             Text("Продолжить")
                                 .font(.system(.headline, design: .rounded))
                                 .fontWeight(.semibold)
@@ -87,9 +110,7 @@ struct LoginView: View {
                                                 .fill())
                         }
                     }
-                    .fullScreenCover(isPresented: $isPresentedConnectionSettings) {
-                        ConnectionSettingsView(isPresentedConnectionSettings: $isPresentedConnectionSettings)
-                    }
+                    
                     Spacer()
                 }
             }

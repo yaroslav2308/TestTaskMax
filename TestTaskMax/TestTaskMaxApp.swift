@@ -12,6 +12,7 @@ struct TestTaskMaxApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
         }
     }
 }
